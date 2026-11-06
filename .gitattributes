@@ -1,0 +1,23 @@
+# Normalise line endings across Windows and macOS contributors.
+* text=auto eol=lf
+
+# Windows command scripts must stay CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary assets — never diff, never convert.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.wav binary
+*.m4a binary
+*.mp3 binary
+*.ogg binary
+*.ttf binary
+*.otf binary
+*.woff2 binary
+*.icns binary
+*.ico binary

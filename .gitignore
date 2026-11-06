@@ -1,0 +1,57 @@
+# ---------------------------------------------------------------------------
+# Agent working files — never published.
+# Planning documents (design / gameplay / asset spec), agent instructions and
+# scratch notes live in agent-files/ and stay out of version control entirely.
+# ---------------------------------------------------------------------------
+agent-files/
+
+# Guard against an agent instruction file appearing at the repo root.
+/agent-readme.md
+AGENTS.md
+AGENT.md
+*.agent.md
+
+.workbuddy/
+.claude/
+.cursor/
+.aider*
+
+# ---------------------------------------------------------------------------
+# OS
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Node / frontend
+# ---------------------------------------------------------------------------
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+
+# ---------------------------------------------------------------------------
+# Rust / Tauri
+# ---------------------------------------------------------------------------
+target/
+src-tauri/target/
+src-tauri/gen/
+
+# ---------------------------------------------------------------------------
+# Environment and secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ---------------------------------------------------------------------------
+# Logs and scratch
+# ---------------------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+tmp/
+scratch/
