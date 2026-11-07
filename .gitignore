@@ -18,7 +18,14 @@ AGENT.md
 
 # ---------------------------------------------------------------------------
 # OS
-# ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------*.iml
+.kotlin
+.gradle
+**/build/
+xcuserdata
+!src/**/build/
+local.properties
+.idea
 .DS_Store
 Thumbs.db
 desktop.ini
@@ -26,6 +33,15 @@ desktop.ini
 # ---------------------------------------------------------------------------
 # Node / frontend
 # ---------------------------------------------------------------------------
+captures
+.externalNativeBuild
+.cxx
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
 node_modules/
 dist/
 dist-ssr/

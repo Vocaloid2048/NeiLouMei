@@ -1,83 +1,76 @@
 # 你滷味 · Your Lou Mei
 
-**A tea egg that lives in a braising pot on your desktop.**
+**一顆住在滷水鍋裡、坐在你桌面上的茶葉蛋。**
 
-Read this in [繁體中文](README_zh.md).
+[Read this in English](README_en.md)
 
 ---
 
-## The idea
+## 這是什麼
 
-Most desktop pets just sit there. This one has a stove.
+大部分桌寵只是坐在那裡。這一隻有火。
 
-The pot's temperature is the whole mechanic: leave for a while and the broth cools, the steam
-dies down, the egg gets quiet. Come back and it boils again. Attention is the only resource the
-app asks for, and it asks for it quietly.
+鍋的溫度就是整個機制：你離開一陣子，滷水降溫、蒸氣散去、蛋也安靜下來；你回來，它重新滾起來。
+這個程式唯一向你索取的資源是注意力，而且索取得很安靜。
 
-The character is a tea egg named 阿茶 (A-Cha). You can rename him.
+角色是一顆茶葉蛋，默認叫阿茶，你可以替他改名。
 
-## Status
+## 目前狀態
 
-**Early development.** The repository currently contains project scaffolding only — there is no
-application code yet. Everything below describes intent, not shipped behaviour.
+**早期開發中。** 倉庫目前只有專案腳手架，還沒有應用程式程式碼。以下全部是規劃，不是現有功能。
 
-## Planned features
+## 規劃功能
 
-- Transparent, always-on-top window, with platform-correct behaviour on Windows and macOS
-- Layered 2D animation — pot, broth, egg and steam composited at runtime, never flattened
-- Idle behaviours, hover, drag, sleep, and a small set of reactions
-- Soft, sparse sound effects
-- AI conversation through any OpenAI-compatible endpoint, including local models
-- Roaming across the desktop
-- Expeditions away from the pot, with a light progression loop
+- 透明、置頂的視窗，Windows 與 macOS 各自符合平台慣例的行為
+- 分層 2D 動畫 —— 鍋、滷水、蛋、蒸氣在執行時合成，不以平面圖取代
+- 待機動作、滑鼠移入、拖曳、睡眠，以及少量反應動作
+- 克制的音效
+- 透過任何 OpenAI 相容端點進行 AI 對話，支援本機模型
+- 在桌面上自由移動
+- 離鍋外出探索，搭配輕量成長循環
 
-## Tech stack
+## 技術棧
 
 Tauri 2 · React · TypeScript · Vite
 
-## Platforms
+## 平台
 
 | | |
 |---|---|
-| Windows | 10, 11 |
-| macOS | 12 and later, Intel and Apple silicon |
+| Windows | 10、11 |
+| macOS | 12 以上，Intel 與 Apple silicon |
 
-Distributed as direct downloads (NSIS installer and DMG). Not distributed through the Mac App
-Store — the transparent-window implementation on macOS uses an API that the store does not
-permit.
+以直接下載方式發佈（NSIS 安裝檔與 DMG）。不經 Mac App Store —— macOS 上實現透明視窗所用的
+API 不為商店所允許。
 
-## Privacy
+## 隱私
 
-This is a small app that sits next to your work all day, so the boundaries are explicit:
+這是一個整天坐在你工作旁邊的小程式，所以界線必須寫清楚：
 
-- Conversations, save data and settings stay on your machine. No account, no sync, no server.
-- No telemetry and no analytics of any kind.
-- **The app does not read what you type.** To know whether you are at the computer, it asks the
-  operating system for the system idle time — a single number, no content, no permission prompt.
-  A global keyboard hook would have been easier and is deliberately not used.
-- API keys are stored locally and are never transmitted anywhere except the endpoint you
-  configure.
+- 對話、存檔與設定全部留在你的機器上。沒有帳號、沒有同步、沒有伺服器。
+- 沒有任何遙測或分析。
+- **程式不會讀取你打了什麼字。** 它判斷你是否在電腦前的方式，是向作業系統查詢系統閒置時間
+  —— 只是一個數字，沒有內容，也不會觸發權限提示。全域鍵盤鉤子更省事，但刻意不用。
+- API key 只存在本機，除你設定的端點外不會傳往任何地方。
 
-## Roadmap
+## 路線圖
 
-- [ ] Application shell: transparent window, tray, autostart
-- [ ] Companion behaviour and animation system
-- [ ] AI conversation with a streaming speech bubble
-- [ ] Roaming across the desktop
-- [ ] Expeditions and progression
-- [ ] Signed installers for both platforms
+- [ ] 應用外殼：透明視窗、系統匣、開機自啟
+- [ ] 陪伴行為與動畫系統
+- [ ] 串流氣泡形式的 AI 對話
+- [ ] 桌面漫遊
+- [ ] 外出探索與成長
+- [ ] 兩個平台的簽章安裝檔
 
-## Building
+## 建置
 
-Not yet available. Once the first build lands, the requirements will be Node 20+, a stable Rust
-toolchain, and the platform toolchain (MSVC build tools on Windows, Xcode Command Line Tools on
-macOS).
+暫未提供。第一個可建置版本出來後，需求會是 Node 20+、穩定版 Rust 工具鏈，以及各平台工具鏈
+（Windows 上的 MSVC build tools、macOS 上的 Xcode Command Line Tools）。
 
-## Contributing
+## 參與
 
-This is a personal project. Issues are welcome; pull requests are not being accepted at this
-time.
+個人專案。歡迎提 issue；目前不接受 pull request。
 
-## License
+## 授權
 
-To be determined.
+待定。
